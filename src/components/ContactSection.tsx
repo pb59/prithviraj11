@@ -51,29 +51,57 @@ export const ContactSection = () => {
               <div className="space-y-6">
                 <h3 className="font-display text-xl font-semibold">Contact Information</h3>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <a
                     href="mailto:me.prithvi55@gmail.com"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
+                    className="flex items-center gap-4 p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                       <Mail size={20} />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Email</p>
+                      <p className="text-sm text-muted-foreground">Email (Primary)</p>
                       <p className="text-foreground font-medium">me.prithvi55@gmail.com</p>
                     </div>
                   </a>
 
                   <a
+                    href="mailto:i.prithvi99@gmail.com"
+                    className="flex items-center gap-4 p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                      <Mail size={20} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Email (Alternate)</p>
+                      <p className="text-foreground font-medium">i.prithvi99@gmail.com</p>
+                    </div>
+                  </a>
+
+                  <a
                     href="tel:+919874290002"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
+                    className="flex items-center gap-4 p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                       <Phone size={20} />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Phone</p>
+                      <p className="text-foreground font-medium">+91-9874290002</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://wa.me/919874290002"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                      <span className="text-lg">💬</span>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">WhatsApp</p>
                       <p className="text-foreground font-medium">+91-9874290002</p>
                     </div>
                   </a>
