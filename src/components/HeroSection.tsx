@@ -36,9 +36,8 @@ export const HeroSection = () => {
               </div>
 
               {/* Name */}
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in-up stagger-1">
-                <span className="text-foreground">Prithviraj</span>
-                <br />
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight opacity-0 animate-fade-in-up stagger-1">
+                <span className="text-foreground">Prithviraj </span>
                 <span className="text-gradient">Bagchi</span>
               </h1>
 
@@ -113,7 +112,7 @@ export const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-pulse-glow" />
               
               {/* Image Container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-glow p-1 animate-float">
+              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full border-glow p-1 animate-float">
                 <img
                   src={profilePhoto}
                   alt="Prithviraj Bagchi - GenAI Architect"
