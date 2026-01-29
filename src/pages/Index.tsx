@@ -6,6 +6,9 @@ import { ProjectsSection } from '@/components/ProjectsSection';
 import { LearningSection } from '@/components/LearningSection';
 import { GPTsSection } from '@/components/GPTsSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
+import { PricingSection } from '@/components/PricingSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { LeadMagnetSection } from '@/components/LeadMagnetSection';
 import { ConsultationSection } from '@/components/ConsultationSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
@@ -21,6 +24,9 @@ const Index = () => {
       <LearningSection />
       <GPTsSection />
       <ExperienceSection />
+      <TestimonialsSection />
+      <PricingSection />
+      <LeadMagnetSection />
       <ConsultationSection />
       <ContactSection />
       <Footer />

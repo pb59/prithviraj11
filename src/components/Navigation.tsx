@@ -6,10 +6,10 @@ const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
-  { href: '#learning', label: 'Learning' },
   { href: '#gpts', label: 'GPTs' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#consultation', label: 'Consultation' },
+  { href: '#testimonials', label: 'Results' },
+  { href: '#pricing', label: 'Pricing' },
+  { href: '#consultation', label: 'Book Call' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -53,10 +53,10 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <a
-            href="#contact"
+            href="#pricing"
             className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
-            Let's Talk
+            Book Session
           </a>
 
           {/* Mobile Menu Button */}

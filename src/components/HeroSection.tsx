@@ -31,8 +31,8 @@ export const HeroSection = () => {
             <div className="space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow text-sm font-medium opacity-0 animate-fade-in-up">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-muted-foreground">Open to Opportunities</span>
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-muted-foreground">Accepting New Mentees & Clients</span>
               </div>
 
               {/* Name */}
@@ -43,41 +43,43 @@ export const HeroSection = () => {
 
               {/* Title */}
               <p className="text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground opacity-0 animate-fade-in-up stagger-2">
-                Engineering Leader <span className="text-primary">|</span> Generative AI Architect <span className="text-primary">|</span> Cloud & Data Modernization
+                <span className="text-gradient font-bold">GenAI Strategist</span> <span className="text-primary">|</span> AI Architect <span className="text-primary">|</span> Mentor
               </p>
 
-              {/* Description */}
-              <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 opacity-0 animate-fade-in-up stagger-3">
-                18+ years of global experience building enterprise-scale data platforms and Generative AI solutions. 
-                I bridge research to real-world impact — from fine-tuning LLMs to leading AI adoption across Fortune 500 clients.
-              </p>
+              {/* Value Proposition */}
+              <div className="glass rounded-xl p-4 max-w-xl mx-auto lg:mx-0 opacity-0 animate-fade-in-up stagger-3">
+                <p className="text-base md:text-lg text-foreground font-medium mb-2">
+                  🚀 Helping professionals & enterprises unlock the power of Generative AI
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  18+ years building enterprise AI solutions for Fortune 500 clients. Now training the next generation of GenAI experts.
+                </p>
+              </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 opacity-0 animate-fade-in-up stagger-4">
                 <a
+                  href="#pricing"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105 glow-primary"
+                >
+                  <span>📚</span>
+                  Book 1:1 Session
+                </a>
+                <a
+                  href="#testimonials"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
+                >
+                  <span>⭐</span>
+                  See Results
+                </a>
+                <a
                   href="https://www.linkedin.com/in/prithviraj999/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105 glow-primary"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
                 >
                   <Linkedin size={18} />
                   LinkedIn
-                </a>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
-                >
-                  <Mail size={18} />
-                  Contact Me
-                </a>
-                <a
-                  href="https://github.com/pb59"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
-                >
-                  <Github size={18} />
-                  GitHub
                 </a>
               </div>
 
