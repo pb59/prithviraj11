@@ -1,5 +1,13 @@
-import { Check, Sparkles, Users, Building2, Rocket, Clock, Video, MessageCircle } from 'lucide-react';
+import { Check, Sparkles, Users, Building2, Rocket, Phone, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+// Contact for booking
+const CONTACT = {
+  phone: '+91-9874290002',
+  phoneLink: 'tel:+919874290002',
+  whatsapp: 'https://wa.me/919874290002?text=Hi%20Prithviraj,%20I%27m%20interested%20in%20booking%20a%20GenAI%20session.',
+  razorpay: 'https://razorpay.me/@prithvirajbagchi',
+};
 
 const pricingPlans = [
   {
@@ -19,8 +27,7 @@ const pricingPlans = [
       'Session recording access',
     ],
     popular: false,
-    cta: 'Book Session',
-    calendlyLink: 'https://calendly.com/prithvi-genai/starter',
+    cta: 'Call to Book',
   },
   {
     name: 'GenAI Pro',
@@ -40,8 +47,7 @@ const pricingPlans = [
       'Access to private resources',
     ],
     popular: true,
-    cta: 'Get Started',
-    calendlyLink: 'https://calendly.com/prithvi-genai/pro',
+    cta: 'Call to Book',
   },
   {
     name: 'Enterprise',
@@ -62,8 +68,7 @@ const pricingPlans = [
       'Dedicated Slack channel (1 week)',
     ],
     popular: false,
-    cta: 'Contact Me',
-    calendlyLink: 'https://calendly.com/prithvi-genai/enterprise',
+    cta: 'Call to Book',
   },
 ];
 
@@ -86,8 +91,6 @@ const bootcampPlan = {
 };
 
 export const PricingSection = () => {
-  const razorpayLink = 'https://razorpay.me/@prithvirajbagchi';
-  
   return (
     <section id="pricing" className="section-padding bg-secondary/30">
       <div className="container-custom">
@@ -156,8 +159,9 @@ export const PricingSection = () => {
                     ? 'bg-primary hover:bg-primary/90'
                     : 'bg-secondary hover:bg-secondary/80'
                 }`}
-                onClick={() => window.open(plan.calendlyLink, '_blank')}
+                onClick={() => window.open(CONTACT.whatsapp, '_blank')}
               >
+                <Phone className="w-5 h-5 mr-2" />
                 {plan.cta}
               </Button>
             </div>
@@ -190,15 +194,15 @@ export const PricingSection = () => {
                 <Button
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                  onClick={() => window.open('https://calendly.com/prithvi-genai/bootcamp-intro', '_blank')}
+                  onClick={() => window.open(CONTACT.whatsapp, '_blank')}
                 >
-                  <Video className="w-5 h-5 mr-2" />
-                  Book Free Intro Call
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call to Book Slot
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={() => window.open(razorpayLink, '_blank')}
+                  onClick={() => window.open(CONTACT.razorpay, '_blank')}
                 >
                   Enroll Now
                 </Button>
