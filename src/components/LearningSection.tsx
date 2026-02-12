@@ -4,6 +4,7 @@ import aiTaxonomy from '@/assets/ai-taxonomy.png';
 import nlpVenn from '@/assets/nlp-venn.webp';
 import aiBranches from '@/assets/ai-branches.png';
 import genaiRoadmap from '@/assets/genai-roadmap.png';
+import genaiVideo from '@/assets/genai-intro-video.mp4';
 
 const learningTopics = [
   {
@@ -67,7 +68,22 @@ export const LearningSection = () => {
           <h3 className="font-display text-2xl font-bold text-center mb-8">
             Visual Learning Resources
           </h3>
-          
+
+          {/* Intro Video */}
+          <div className="glass rounded-xl p-4 overflow-hidden">
+            <video
+              src={genaiVideo}
+              controls
+              className="w-full rounded-lg"
+              poster={genaiJourney}
+            >
+              Your browser does not support the video tag.
+            </video>
+            <p className="text-sm text-center mt-3 text-muted-foreground">
+              🎬 GenAI Learning Journey — Watch the overview
+            </p>
+          </div>
+
           {/* Main Journey Image */}
           <div className="glass rounded-xl p-4 overflow-hidden">
             <img
