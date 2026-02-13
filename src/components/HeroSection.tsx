@@ -1,141 +1,133 @@
-import { Linkedin, Mail, Download, ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-    >
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-hero">
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
         
         {/* Grid Pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
                               linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px',
+            backgroundSize: '60px 60px',
           }}
         />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="space-y-6">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow text-sm font-medium opacity-0 animate-fade-in-up">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-muted-foreground">Accepting New Mentees & Clients</span>
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow text-sm font-medium mb-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-muted-foreground">Enterprise AI Solutions by Prithviraj Bagchi</span>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
+          >
+            AI Products That
+            <br />
+            <span className="text-gradient">Transform Business</span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
+          >
+            From custom GPTs to enterprise AI consulting — 18+ years of building GenAI solutions for Fortune 500 clients, now available to you.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap items-center justify-center gap-4 mb-16"
+          >
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold text-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-primary/25"
+            >
+              Explore Products
+              <ArrowRight size={20} />
+            </Link>
+            <a
+              href="#learning"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-border bg-secondary/30 text-foreground font-semibold text-lg hover:bg-secondary/60 transition-all hover:scale-105"
+            >
+              <Play size={18} />
+              Watch Demo
+            </a>
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+          >
+            {[
+              { value: '18+', label: 'Years Experience' },
+              { value: '200K+', label: 'Users Impacted' },
+              { value: '50+', label: 'Projects Delivered' },
+              { value: '4.9/5', label: 'Client Rating' },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
+                <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
               </div>
-
-              {/* Name */}
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight opacity-0 animate-fade-in-up stagger-1">
-                <span className="text-foreground">Prithviraj </span>
-                <span className="text-gradient">Bagchi</span>
-              </h1>
-
-              {/* Title */}
-              <p className="text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground opacity-0 animate-fade-in-up stagger-2">
-                <span className="text-gradient font-bold">GenAI Strategist</span> <span className="text-primary">|</span> AI Architect <span className="text-primary">|</span> Mentor
-              </p>
-
-              {/* Value Proposition */}
-              <div className="glass rounded-xl p-4 max-w-xl mx-auto lg:mx-0 opacity-0 animate-fade-in-up stagger-3">
-                <p className="text-base md:text-lg text-foreground font-medium mb-2">
-                  🚀 Helping professionals & enterprises unlock the power of Generative AI
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  18+ years building enterprise AI solutions for Fortune 500 clients. Now training the next generation of GenAI experts.
-                </p>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 opacity-0 animate-fade-in-up stagger-4">
-                <a
-                  href="#pricing"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105 glow-primary"
-                >
-                  <span>📚</span>
-                  Book 1:1 Session
-                </a>
-                <a
-                  href="#testimonials"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
-                >
-                  <span>⭐</span>
-                  See Results
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/prithviraj999/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/50 text-foreground font-medium hover:bg-secondary transition-all hover:scale-105"
-                >
-                  <Linkedin size={18} />
-                  LinkedIn
-                </a>
-              </div>
-
-              {/* Quick Links */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 text-sm opacity-0 animate-fade-in-up stagger-5">
-                <a
-                  href="https://huggingface.co/prithvi55"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  🤗 Hugging Face
-                  <ExternalLink size={12} />
-                </a>
-                <a
-                  href="https://huggingface.co/spaces/prithvi55/talk2data"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  🚀 Talk2SQL Demo
-                  <ExternalLink size={12} />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2 opacity-0 animate-fade-in-up stagger-2">
-            <div className="relative">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-pulse-glow" />
-              
-              {/* Image Container */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full border-glow p-1 animate-float">
-                <img
-                  src={profilePhoto}
-                  alt="Prithviraj Bagchi - GenAI Architect"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-primary/80 animate-pulse" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-accent/80 animate-pulse" style={{ animationDelay: '0.5s' }} />
-            </div>
-          </div>
+            ))}
+          </motion.div>
         </div>
+
+        {/* Profile + Credentials */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-16 flex items-center justify-center gap-4"
+        >
+          <img src={profilePhoto} alt="Prithviraj Bagchi" className="w-12 h-12 rounded-full border-2 border-primary/50" />
+          <div className="text-left">
+            <p className="font-semibold text-sm">Built by Prithviraj Bagchi</p>
+            <p className="text-xs text-muted-foreground">GenAI Architect • Accenture • Wagmice AI Founder</p>
+          </div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in-up stagger-6">
-        <div className="flex flex-col items-center gap-2 text-muted-foreground">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="flex flex-col items-center gap-2 text-muted-foreground"
+        >
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-muted-foreground to-transparent" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
