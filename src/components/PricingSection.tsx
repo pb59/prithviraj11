@@ -7,6 +7,7 @@ const CONTACT = {
   phoneLink: 'tel:+919874290002',
   whatsapp: 'https://wa.me/919874290002?text=Hi%20Prithviraj,%20I%27m%20interested%20in%20booking%20a%20GenAI%20session.',
   razorpay: 'https://razorpay.me/@prithvirajbagchi',
+  upiId: 'i.prithvi99@okicici',
 };
 
 const pricingPlans = [
