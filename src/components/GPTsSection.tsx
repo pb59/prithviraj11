@@ -1,4 +1,5 @@
-import { ExternalLink, Sparkles, TrendingUp, GraduationCap, CreditCard } from 'lucide-react';
+import { ExternalLink, Sparkles, TrendingUp, GraduationCap, CreditCard, Brain } from 'lucide-react';
+import gpayQrImage from '@/assets/gpay-qr.png';
 
 const customGPTs = [
   {
@@ -17,11 +18,19 @@ const customGPTs = [
     category: 'Finance',
     color: 'from-blue-500 to-cyan-500',
   },
+  {
+    name: 'Gemini Gem Algo',
+    description: 'Advanced algorithmic trading insights powered by Google Gemini. Explore AI-driven market strategies and quantitative analysis.',
+    icon: Brain,
+    link: 'https://gemini.google.com/gem-labs/1hXdeM3FHJciASuhiFzi69uvp2y5aFu1q',
+    category: 'Trading & AI',
+    color: 'from-purple-500 to-pink-500',
+  },
 ];
 
 export const GPTsSection = () => {
-  const gpayNumber = '9874290002';
-  const gpayLink = `upi://pay?pa=${gpayNumber}@gpay&pn=Prithviraj%20Bagchi&cu=INR`;
+  const upiId = 'i.prithvi99@okicici';
+  const gpayLink = `upi://pay?pa=${upiId}&pn=Prithviraj%20Bagchi&cu=INR`;
 
   return (
     <section id="gpts" className="section-padding">
@@ -92,19 +101,19 @@ export const GPTsSection = () => {
             If you find my GPTs useful, consider supporting my work. Your contribution helps me build more AI tools!
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col items-center gap-6">
+            <div className="bg-white rounded-2xl p-4 inline-block">
+              <img src={gpayQrImage} alt="Scan to pay via GPay UPI" className="w-48 h-48 object-contain" />
+            </div>
+            <div className="text-sm text-muted-foreground">
+              UPI ID: <span className="font-mono text-foreground">{upiId}</span>
+            </div>
             <a
               href={gpayLink}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium hover:opacity-90 transition-all hover:scale-105"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.75 5.25h1.5a.75.75 0 010 1.5h-1.5a2.25 2.25 0 00-2.25 2.25v1.5h3a.75.75 0 010 1.5h-3v6a.75.75 0 01-1.5 0v-6h-1.5a.75.75 0 010-1.5H9V9a3.75 3.75 0 013.75-3.75z"/>
-              </svg>
-              Pay via GPay
+              Pay via UPI App
             </a>
-            <div className="text-sm text-muted-foreground">
-              GPay/UPI: <span className="font-mono text-foreground">{gpayNumber}</span>
-            </div>
           </div>
         </div>
       </div>

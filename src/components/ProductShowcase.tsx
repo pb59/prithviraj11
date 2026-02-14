@@ -29,11 +29,11 @@ const products = [
   },
   {
     icon: Brain,
-    name: 'LLM Fine-Tuning',
-    tagline: 'Domain-specific AI models',
-    description: 'Enterprise-grade fine-tuned models for support, analytics, and SQL generation.',
+    name: 'Gemini Gem Algo',
+    tagline: 'AI-driven trading strategies',
+    description: 'Algorithmic trading insights powered by Google Gemini. Quantitative analysis made accessible.',
     color: 'from-purple-500 to-pink-500',
-    link: 'https://huggingface.co/prithvi55',
+    link: 'https://gemini.google.com/gem-labs/1hXdeM3FHJciASuhiFzi69uvp2y5aFu1q',
   },
 ];
 
