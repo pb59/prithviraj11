@@ -44,7 +44,7 @@ export const ProductShowcase = () => {
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4">
           <div>
             <span className="text-primary text-sm font-medium uppercase tracking-widest">Products</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
               AI Tools I've <span className="text-gradient">Built</span>
             </h2>
           </div>

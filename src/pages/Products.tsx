@@ -20,7 +20,7 @@ const Products = () => {
           <div className="container-custom relative z-10 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Products</span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
                 AI-Powered <span className="text-gradient">Solutions</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

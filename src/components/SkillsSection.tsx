@@ -66,7 +66,7 @@ export const SkillsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">Skills & Expertise</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
             Technical <span className="text-gradient">Mastery</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">

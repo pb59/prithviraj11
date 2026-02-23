@@ -44,7 +44,7 @@ export const GPTsSection = () => {
             <Sparkles className="inline w-4 h-4 mr-2" />
             Custom GPTs
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             AI Tools I've <span className="text-gradient">Created</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
