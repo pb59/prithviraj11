@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">Featured Projects</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
             Building the <span className="text-gradient">Future of AI</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">

@@ -33,7 +33,7 @@ export const ContactSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-medium uppercase tracking-widest">Get In Touch</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
               Let's Build Something <span className="text-gradient">Amazing</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">

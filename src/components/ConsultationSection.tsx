@@ -66,7 +66,7 @@ export const ConsultationSection = () => {
           <span className="inline-block px-4 py-2 rounded-full border-glow text-sm font-medium text-primary mb-4">
             1-to-1 Learning
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Become a <span className="text-gradient">GenAI Expert</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

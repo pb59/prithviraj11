@@ -28,7 +28,7 @@ export const HowItWorksSection = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">How It Works</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
             Three Steps to <span className="text-gradient">AI Excellence</span>
           </h2>
         </div>
