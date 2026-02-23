@@ -1,5 +1,7 @@
-import { ExternalLink, Sparkles, TrendingUp, GraduationCap, CreditCard, Brain } from 'lucide-react';
+import { useState } from 'react';
+import { ExternalLink, Sparkles, TrendingUp, GraduationCap, CreditCard, Brain, Play, X } from 'lucide-react';
 import gpayQrImage from '@/assets/gpay-qr.png';
+import superchildVideo from '@/assets/superchild-demo.mp4';
 
 const customGPTs = [
   {
@@ -29,6 +31,7 @@ const customGPTs = [
 ];
 
 export const GPTsSection = () => {
+  const [showSuperchildVideo, setShowSuperchildVideo] = useState(false);
   const upiId = 'i.prithvi99@okicici';
   const gpayLink = `upi://pay?pa=${upiId}&pn=Prithviraj%20Bagchi&cu=INR`;
 
@@ -76,16 +79,26 @@ export const GPTsSection = () => {
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <a
-                  href={gpt.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105 mt-4"
-                >
-                  Try {gpt.name.split(' ')[0]}
-                  <ExternalLink size={16} />
-                </a>
+                {/* CTA Buttons */}
+                <div className="flex items-center gap-3 mt-4">
+                  <a
+                    href={gpt.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105"
+                  >
+                    Try {gpt.name.split(' ')[0]}
+                    <ExternalLink size={16} />
+                  </a>
+                  {gpt.name === 'Super Child GPT' && (
+                    <button
+                      onClick={() => setShowSuperchildVideo(true)}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-primary/30 text-primary font-medium hover:bg-primary/10 transition-all"
+                    >
+                      <Play size={16} /> Watch Demo
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -117,6 +130,18 @@ export const GPTsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* SuperChild Video Modal */}
+      {showSuperchildVideo && (
+        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowSuperchildVideo(false)}>
+          <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-card border border-border shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowSuperchildVideo(false)} className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 text-foreground hover:bg-background">
+              <X size={20} />
+            </button>
+            <video src={superchildVideo} controls autoPlay className="w-full" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
