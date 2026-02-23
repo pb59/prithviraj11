@@ -1,9 +1,13 @@
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Play, Sparkles, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import profilePhoto from '@/assets/profile-photo.jpg';
+import adVideo from '@/assets/ad-demo.mp4';
 
 export const HeroSection = () => {
+  const [showAdVideo, setShowAdVideo] = useState(false);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
@@ -72,13 +76,13 @@ export const HeroSection = () => {
               Explore Products
               <ArrowRight size={20} />
             </Link>
-            <a
-              href="#learning"
+            <button
+              onClick={() => setShowAdVideo(true)}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-border bg-secondary/30 text-foreground font-semibold text-lg hover:bg-secondary/60 transition-all hover:scale-105"
             >
               <Play size={18} />
               Watch Demo
-            </a>
+            </button>
           </motion.div>
 
           {/* Stats Row */}
@@ -129,6 +133,17 @@ export const HeroSection = () => {
           <div className="w-px h-12 bg-gradient-to-b from-muted-foreground to-transparent" />
         </motion.div>
       </div>
+      {/* Ad Video Modal */}
+      {showAdVideo && (
+        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowAdVideo(false)}>
+          <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-card border border-border shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowAdVideo(false)} className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 text-foreground hover:bg-background">
+              <X size={20} />
+            </button>
+            <video src={adVideo} controls autoPlay className="w-full" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
