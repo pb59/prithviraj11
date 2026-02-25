@@ -136,7 +136,7 @@ export const HeroSection = () => {
       {/* Ad Video Modal */}
       {showAdVideo && (
         <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowAdVideo(false)}>
-          <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-card border border-border shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden bg-card border border-border shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setShowAdVideo(false)} className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 text-foreground hover:bg-background">
               <X size={20} />
             </button>
