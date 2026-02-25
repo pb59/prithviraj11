@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin, Github, ExternalLink } from 'lucide-react';
 const socialLinks = [
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/prithviraj999/',
+    url: 'https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=prithviraj999',
     icon: Linkedin,
   },
   {

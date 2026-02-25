@@ -40,7 +40,7 @@ export const Footer = () => {
 
           {/* Social */}
           <div className="flex md:justify-end items-start gap-3">
-            <a href="https://www.linkedin.com/in/prithviraj999/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=prithviraj999" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
             <a href="https://github.com/pb59" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
