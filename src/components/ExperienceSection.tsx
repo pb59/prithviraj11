@@ -56,10 +56,10 @@ export const ExperienceSection = () => {
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">Career Journey</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
-            18+ Years of <span className="text-gradient">Global Impact</span>
+            20+ Years as a <span className="text-gradient">Principal Consultant & GenAI Generalist</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            From database administration to leading enterprise AI transformations across Fortune 500 clients.
+            From database administration to leading enterprise AI transformations and founding NexusAI — delivering for Fortune 500 clients across four continents.
           </p>
         </div>
 
