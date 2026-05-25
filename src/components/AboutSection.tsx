@@ -39,13 +39,13 @@ export const AboutSection = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am an <span className="text-foreground font-medium">Engineering Leader</span> and <span className="text-primary font-medium">Generative AI Architect</span> with nearly two decades of global, client-facing experience across the US, Europe, APAC, and Australia.
+              I am a <span className="text-foreground font-medium">Principal Consultant</span> and <span className="text-primary font-medium">AI Generalist</span> with <span className="text-foreground font-medium">20+ years</span> of global, client-facing experience across the US, Europe, APAC, and Australia — and the founder of <span className="text-accent font-medium">NexusAI</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               My work spans <span className="text-foreground font-medium">enterprise cloud modernization</span>, large-scale data engineering, and applied Generative AI — including LLM fine-tuning, RAG pipelines, and multi-agent systems.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I currently lead AI and data modernization initiatives at <span className="text-foreground font-medium">Accenture</span> and actively build open-source GenAI products on Hugging Face and GitHub. I am also the founder of <span className="text-accent font-medium">Wagmice AI</span>, an experimental venture exploring the intersection of Generative AI, blockchain, and emerging technologies.
+              Through <span className="text-accent font-medium">NexusAI</span>, I build production GPTs and AI tools — Super Child GPT, NiftyNavigator AI, Gemini Gem Algo Trading, and Talk2SQL — and lead AI & data modernization initiatives at <span className="text-foreground font-medium">Accenture</span>, with open-source contributions on Hugging Face and GitHub.
             </p>
 
             {/* Stats Cards */}

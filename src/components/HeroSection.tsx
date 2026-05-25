@@ -52,6 +52,16 @@ export const HeroSection = () => {
             <span className="text-gradient">Transform Business</span>
           </motion.h1>
 
+          {/* Tagline for AI/SEO search */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="text-base md:text-lg font-medium text-primary/90 mb-4"
+          >
+            Principal Consultant & GenAI Generalist · 20+ years · Founder of NexusAI
+          </motion.p>
+
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -59,7 +69,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            From custom GPTs to enterprise AI consulting — 18+ years of building GenAI solutions for Fortune 500 clients, now available to you.
+            Hire an AI generalist with 20+ years as a Principal Consultant — builder of NexusAI's custom GPTs (Super Child, NiftyNavigator, Gemini Gem Algo, Talk2SQL) and enterprise GenAI for Fortune 500 clients.
           </motion.p>
 
           {/* CTA Buttons */}

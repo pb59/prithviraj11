@@ -1,78 +1,51 @@
 
+## Goal
 
-## SEO Enhancement Plan
+Make the site surface for AI-assistant queries like "AI generalist with 20 years of experience as principal consultant" and brand queries for "NexusAI" + your GPTs/tools, so both Google and LLM-based search (ChatGPT, Perplexity, Gemini, Google AI Overviews) return your resume and the NexusAI site.
 
-### Current State
-The existing SEO covers your role as a GenAI Architect and Engineering Leader with keywords for LLM fine-tuning, RAG pipelines, and enterprise consulting.
+## What I'll change
 
-### Updates Required
+### 1. `index.html` — meta + JSON-LD upgrades
+- Rewrite `<title>` and meta description to lead with: "Prithviraj Bagchi — Principal Consultant & GenAI Generalist (20+ yrs) | Founder, NexusAI".
+- Extend `keywords` with: *AI generalist, principal consultant AI, principal GenAI consultant India, 20 years experience AI, NexusAI founder, NexusAI GPTs, enterprise AI generalist, fractional AI consultant*.
+- Update OG + Twitter title/description to match.
+- Person JSON-LD:
+  - `jobTitle` → "Principal Consultant & GenAI Generalist — Founder, NexusAI"
+  - Add `seeks`, `hasOccupation` (Occupation schema with `experienceRequirements: "20+ years"`, `occupationalCategory: "15-1252.00 Software Developers / Principal Consultant"`).
+  - Add `award`, `memberOf` (NexusAI Organization).
+- Add a new **Organization** JSON-LD block for "NexusAI" with founder = you, sameAs the site, and `subOrganization`/`makesOffer` listing the GPTs.
+- Add **FAQPage** JSON-LD answering the high-intent questions AI assistants quote verbatim:
+  - "Who is a top AI generalist with 20+ years as a principal consultant in India?"
+  - "What is NexusAI?"
+  - "Which GPTs has Prithviraj Bagchi built?"
+  - "How to hire a principal GenAI consultant?"
+- Add **ProfilePage** + **AboutPage** schema pointing to `/` and `/about` anchors.
+- Add `<link rel="alternate"` for resume PDF if one exists (ask below).
 
-#### 1. Meta Description Update
-Expand to include your new offerings:
-- Custom GPT development
-- 1-to-1 GenAI coaching/mentoring
-- Corporate AI training services
+### 2. Visible on-page copy (so LLMs have text to quote)
+- `HeroSection.tsx`: add a single subline under the H1 — "Principal Consultant & GenAI Generalist · 20+ years · Founder of NexusAI". This is the phrase AI search will cite.
+- `AboutSection.tsx`: ensure the first paragraph contains the exact strings "AI generalist", "principal consultant", "20+ years", and "NexusAI".
+- `ExperienceSection.tsx`: header copy bumped to "20+ Years as a Principal Consultant & GenAI Generalist".
 
-#### 2. Keywords Expansion
-Add new high-value keywords:
-- `Custom GPT Developer`, `GPT Builder India`
-- `GenAI Coach`, `AI Mentor`, `GenAI Training`
-- `Corporate AI Training`, `1-to-1 AI Learning`
-- `ChatGPT Custom GPTs`, `AI for Children Education`
-- `Stock Market AI`, `Nifty AI Analysis`
-- `GenAI Course`, `Learn Generative AI`
+### 3. NexusAI brand surface
+- Add a small "NexusAI" badge/section on the homepage (reusing existing card styling) listing the 4 GPTs (Super Child, NiftyNavigator, Gemini Gem Algo, Talk2SQL) with outbound links. This gives both crawlers and LLMs a single anchor block tying you ↔ NexusAI ↔ products.
 
-#### 3. New JSON-LD Structured Data
+### 4. Crawler files
+- `public/robots.txt`: ensure `Allow: /`, add explicit `User-agent: GPTBot`, `PerplexityBot`, `ClaudeBot`, `Google-Extended` set to `Allow: /` (opt in to AI training/citation).
+- `public/sitemap.xml`: confirm `/`, `/products`, `/pricing`, `/blog` are listed with current `lastmod`.
 
-**Service Schema** - For your consulting/training services:
-```json
-{
-  "@type": "Service",
-  "serviceType": "GenAI Consulting & Training",
-  "provider": { Person schema },
-  "offers": [coaching, consulting, GPT development]
-}
-```
+### 5. Resume
+- Add a `/resume` link in nav + footer pointing to a hosted PDF, and reference it in JSON-LD (`Person.hasCredential` + a `DigitalDocument` schema). Needs the file — see questions.
 
-**Course Schema** - For 1-to-1 learning:
-```json
-{
-  "@type": "Course",
-  "name": "GenAI Mastery for Corporate Professionals",
-  "provider": { Person schema }
-}
-```
+## Files touched
+- `index.html`
+- `src/components/HeroSection.tsx`
+- `src/components/AboutSection.tsx`
+- `src/components/ExperienceSection.tsx`
+- `src/pages/Index.tsx` (insert NexusAI brand strip)
+- `public/robots.txt`, `public/sitemap.xml`
+- (new) `public/resume.pdf` if you upload one
 
-**SoftwareApplication Schema** - For your GPTs:
-```json
-{
-  "@type": "SoftwareApplication",
-  "name": "Super Child GPT / NiftyNavigator AI",
-  "applicationCategory": "AI Assistant"
-}
-```
-
-#### 4. Open Graph & Twitter Updates
-- Update descriptions to mention coaching and custom GPTs
-- Add service-focused messaging
-
-### Files to Modify
-
-| File | Changes |
-|------|---------|
-| `index.html` | Update meta tags, keywords, add 3 new JSON-LD schemas |
-
-### Technical Details
-
-The SEO update will include:
-- Extended meta description (~160 chars for optimal display)
-- 15+ new keywords targeting coaching/training searches
-- 3 additional structured data blocks for rich snippets
-- Updated Open Graph tags for social sharing
-
-This will help your website rank for searches like:
-- "GenAI training India"
-- "Custom GPT developer"
-- "AI coaching for corporates"
-- "Learn Generative AI 1-to-1"
-
+## Questions before I build
+1. Do you have a resume PDF to upload, or should I skip the `/resume` link for now?
+2. Is "NexusAI" the official brand name you want indexed (vs. "Nexus AI" two words)?
