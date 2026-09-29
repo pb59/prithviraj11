@@ -4,7 +4,7 @@ import { ProductShowcase } from '@/components/ProductShowcase';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { ResearchSection } from '@/components/ResearchSection';
 import { LeadMagnetSection } from '@/components/LeadMagnetSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
@@ -19,7 +19,7 @@ const Index = () => {
         <HowItWorksSection />
         <section id="about"><AboutSection /></section>
         <section id="experience"><ExperienceSection /></section>
-        <section id="testimonials"><TestimonialsSection /></section>
+        <ResearchSection />
         <section id="lead-magnet"><LeadMagnetSection /></section>
         <section id="contact"><ContactSection /></section>
       </main>

@@ -48,4 +48,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://prithvirajbagchi.ai/sitemap.xml
+Sitemap: https://prithviraj11.lovable.app/sitemap.xml

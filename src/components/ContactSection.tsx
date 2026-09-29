@@ -1,10 +1,15 @@
-import { Mail, Phone, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, ExternalLink, Youtube } from 'lucide-react';
 
 const socialLinks = [
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=prithviraj999',
+    url: 'https://www.linkedin.com/in/prithviraj999/',
     icon: Linkedin,
+  },
+  {
+    label: 'YouTube',
+    url: 'https://www.youtube.com/@prithvirajbagchi',
+    icon: Youtube,
   },
   {
     label: 'GitHub',

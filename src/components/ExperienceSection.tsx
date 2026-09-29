@@ -5,11 +5,10 @@ const experiences = [
     period: '2012 – Present',
     location: 'Global Client Coverage: US, Europe, APAC, Australia',
     highlights: [
-      'Led 50+ enterprise modernization programs',
-      'Designed and deployed GenAI & RAG-based solutions',
-      'Defined GenAI adoption blueprints for Renault-Nissan, L\'Oréal, Rio Tinto, Alcoa, GEA',
-      'Built multi-agent GenAI solutions using LangChain & Hugging Face',
-      'Oversaw architecture of SQL Server, Azure Data Lake, and Synapse deployments',
+      'Enterprise solution architecture across data, cloud, and analytics platforms',
+      'GenAI and RAG-based solution design',
+      'Agentic AI and multi-agent orchestration using LangChain and Hugging Face',
+      'Architecture for SQL Server, Azure Data Lake, and Synapse environments',
     ],
     current: true,
   },
@@ -56,10 +55,10 @@ export const ExperienceSection = () => {
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">Career Journey</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
-            20+ Years as a <span className="text-gradient">Principal Consultant & GenAI Generalist</span>
+            18+ Years in <span className="text-gradient">Enterprise Technology</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            From database administration to leading enterprise AI transformations and founding NexusAI — delivering for Fortune 500 clients across four continents.
+            Prithviraj Bagchi’s progression from database engineering to solution architecture, cloud data platforms, and applied GenAI systems.
           </p>
         </div>
 

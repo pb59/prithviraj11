@@ -1,25 +1,25 @@
-import { MapPin, Briefcase, BookOpen, Rocket } from 'lucide-react';
+import { Briefcase, Brain, Cloud, Database } from 'lucide-react';
 
 const highlights = [
-  {
-    icon: MapPin,
-    label: 'Global Presence',
-    value: 'US, Europe, APAC, Australia',
-  },
   {
     icon: Briefcase,
     label: 'Experience',
     value: '18+ Years',
   },
   {
-    icon: BookOpen,
-    label: 'Projects Led',
-    value: '50+ Modernization Programs',
+    icon: Brain,
+    label: 'AI Focus',
+    value: 'GenAI & Agentic AI',
   },
   {
-    icon: Rocket,
-    label: 'Users Impacted',
-    value: '200K+ Enterprise Users',
+    icon: Database,
+    label: 'Data Focus',
+    value: 'Architecture & Engineering',
+  },
+  {
+    icon: Cloud,
+    label: 'Platforms',
+    value: 'Cloud Data & Analytics',
   },
 ];
 
@@ -31,7 +31,7 @@ export const AboutSection = () => {
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-widest">About Me</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mt-4">
-            Bridging AI Research to <span className="text-gradient">Enterprise Impact</span>
+            Prithviraj Bagchi: from data platforms to <span className="text-gradient">enterprise AI</span>
           </h2>
         </div>
 
@@ -39,13 +39,13 @@ export const AboutSection = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a <span className="text-foreground font-medium">Principal Consultant</span> and <span className="text-primary font-medium">AI Generalist</span> with <span className="text-foreground font-medium">20+ years</span> of global, client-facing experience across the US, Europe, APAC, and Australia — and the founder of <span className="text-accent font-medium">NexusAI</span>.
+              I’m <span className="text-foreground font-medium">Prithviraj Bagchi</span>, a <span className="text-primary font-medium">Principal Consultant &amp; GenAI Generalist</span> with <span className="text-foreground font-medium">18+ years</span> in enterprise technology and an AI &amp; Data Architect specialization.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My work spans <span className="text-foreground font-medium">enterprise cloud modernization</span>, large-scale data engineering, and applied Generative AI — including LLM fine-tuning, RAG pipelines, and multi-agent systems.
+              My work connects <span className="text-foreground font-medium">data architecture, data engineering, analytics, and cloud data platforms</span> with applied Generative AI — including RAG, LLM applications, and agentic AI systems.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Through <span className="text-accent font-medium">NexusAI</span>, I build production GPTs and AI tools — Super Child GPT, NiftyNavigator AI, Gemini Gem Algo Trading, and Talk2SQL — and lead AI & data modernization initiatives at <span className="text-foreground font-medium">Accenture</span>, with open-source contributions on Hugging Face and GitHub.
+              Through <span className="text-accent font-medium">NexusAI</span>, I build GPTs and AI tools including Super Child GPT, NiftyNavigator AI, Gemini Gem Algo, and Talk2SQL, alongside open-source work on Hugging Face and GitHub.
             </p>
 
             {/* Stats Cards */}
@@ -70,12 +70,12 @@ export const AboutSection = () => {
               <h3 className="font-display text-xl font-semibold mb-6 text-gradient">Core Strengths</h3>
               <ul className="space-y-4">
                 {[
-                  'Leadership at Scale: 18 years leading Data Engineering & Solution Architecture across global enterprises',
-                  'Generative AI Expertise: Fine-tuning LLMs, RAG pipelines, LangChain, multi-agent orchestration',
-                  'Enterprise Modernization: Led 50+ data/analytics programs impacting 200K+ users',
-                  'Cloud & Data Platforms: Deep expertise in Azure, AWS, SQL Server, GCP',
-                  'Responsible AI & Security: Established adoption frameworks with bias detection & compliance',
-                  'Startup Leadership: Founder of Wagmice AI – GenAI + blockchain + quantum solutions',
+                  'AI & Data Architecture: Connecting enterprise data foundations with AI-enabled systems',
+                  'Generative AI: RAG pipelines, LLM applications, LangChain, and agentic workflows',
+                  'Data Architecture: Data engineering, analytics, SQL, and enterprise data platforms',
+                  'Cloud Data Platforms: Azure, AWS, Google Cloud, SQL Server, and Synapse',
+                  'Responsible AI: Governance, risk assessment, security, and reliable adoption',
+                  'Product Building: NexusAI GPTs, AI tools, and open-source experimentation',
                 ].map((strength, index) => (
                   <li key={index} className="flex items-start gap-3 text-muted-foreground">
                     <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />

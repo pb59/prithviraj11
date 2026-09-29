@@ -104,7 +104,7 @@ export const ConsultationSection = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Real-world GenAI implementations for Fortune 500 clients</span>
+                  <span>Architecture guidance grounded in enterprise technology experience</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />

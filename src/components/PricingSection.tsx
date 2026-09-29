@@ -32,7 +32,7 @@ const pricingPlans = [
   },
   {
     name: 'GenAI Pro',
-    subtitle: 'Most Popular',
+    subtitle: 'Extended Session',
     price: '4,999',
     duration: 'per session',
     description: 'Comprehensive mentoring for serious AI practitioners',
@@ -47,7 +47,7 @@ const pricingPlans = [
       'Priority email support (48hrs)',
       'Access to private resources',
     ],
-    popular: true,
+    popular: false,
     cta: 'Call to Book',
   },
   {
@@ -77,7 +77,7 @@ const bootcampPlan = {
   name: '4-Week GenAI Bootcamp',
   price: '24,999',
   originalPrice: '39,999',
-  description: 'Transform from beginner to production-ready GenAI developer',
+  description: 'A structured introduction to building practical GenAI applications',
   features: [
     '8 live 1:1 sessions (2 per week)',
     'Hands-on projects with real datasets',
@@ -118,13 +118,6 @@ export const PricingSection = () => {
                 plan.popular ? 'border-primary ring-2 ring-primary/20' : ''
               }`}
             >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium">
-                    Most Popular
-                  </span>
-                </div>
-              )}
 
               {/* Icon */}
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-6`}>
@@ -176,7 +169,7 @@ export const PricingSection = () => {
           <div className="relative grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-medium mb-4">
-                🎓 Limited Seats
+                🎓 Guided Program
               </span>
               <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">
                 {bootcampPlan.name}

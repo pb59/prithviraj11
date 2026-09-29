@@ -71,7 +71,7 @@ export const LeadMagnetSection = () => {
               Kickstart Your <span className="text-gradient">GenAI Journey</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Get instant access to my curated resources that have helped 50+ professionals transition into high-paying GenAI roles.
+              Request curated learning resources on GenAI foundations, RAG systems, and practical implementation.
             </p>
 
             {/* Email Form */}
@@ -126,23 +126,6 @@ export const LeadMagnetSection = () => {
           </div>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 pt-8 border-t border-border/50">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              500+ Downloads
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-500" />
-              Trusted by TCS, Infosys, Wipro professionals
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-purple-500" />
-              Updated for 2026
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
