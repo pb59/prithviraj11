@@ -5,7 +5,7 @@ const projects = [
     title: 'Talk2SQL',
     subtitle: 'Natural Language → SQL Analytics',
     description:
-      'A GenAI-powered analytics application enabling business users to query databases using natural language. Reduced query turnaround time by ~40%.',
+      'A GenAI-powered analytics application for exploring database queries through natural language.',
     tags: ['GenAI', 'NLP', 'SQL', 'Analytics'],
     links: [
       { label: 'Live Demo', url: 'https://pb59.github.io/Newsletter1/', icon: ExternalLink },

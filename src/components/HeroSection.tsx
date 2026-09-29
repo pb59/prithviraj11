@@ -37,7 +37,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow text-sm font-medium mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-muted-foreground">Enterprise AI Solutions by Prithviraj Bagchi</span>
+            <span className="text-muted-foreground">Prithviraj Bagchi · Enterprise AI &amp; Data Architecture</span>
           </motion.div>
 
           {/* Headline */}
@@ -47,9 +47,9 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6"
           >
-            AI Products That
+            Prithviraj Bagchi
             <br />
-            <span className="text-gradient">Transform Business</span>
+            <span className="text-gradient">Principal Consultant &amp; GenAI Generalist</span>
           </motion.h1>
 
           {/* Tagline for AI/SEO search */}
@@ -59,7 +59,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-base md:text-lg font-medium text-primary/90 mb-4"
           >
-            Principal Consultant & GenAI Generalist · 20+ years · Founder of NexusAI
+            AI &amp; Data Architect · Enterprise GenAI | Agentic AI | Data Architecture | Cloud Data Platforms
           </motion.p>
 
           {/* Subtitle */}
@@ -69,7 +69,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            Hire an AI generalist with 20+ years as a Principal Consultant — builder of NexusAI's custom GPTs (Super Child, NiftyNavigator, Gemini Gem Algo, Talk2SQL) and enterprise GenAI for Fortune 500 clients.
+            18+ years in enterprise technology, bridging data engineering and cloud architecture with practical GenAI, RAG, and agentic AI systems.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -95,18 +95,18 @@ export const HeroSection = () => {
             </button>
           </motion.div>
 
-          {/* Stats Row */}
+          {/* Expertise Row */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {[
-              { value: '18+', label: 'Years Experience' },
-              { value: '200K+', label: 'Users Impacted' },
-              { value: '50+', label: 'Projects Delivered' },
-              { value: '4.9/5', label: 'Client Rating' },
+              { value: '18+', label: 'Years in Enterprise Technology' },
+              { value: 'AI', label: 'Enterprise & GenAI Architecture' },
+              { value: 'Data', label: 'Engineering & Analytics' },
+              { value: 'Cloud', label: 'Data Platforms' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
@@ -126,7 +126,7 @@ export const HeroSection = () => {
           <img src={profilePhoto} alt="Prithviraj Bagchi" className="w-12 h-12 rounded-full border-2 border-primary/50" />
           <div className="text-left">
             <p className="font-semibold text-sm">Built by Prithviraj Bagchi</p>
-            <p className="text-xs text-muted-foreground">GenAI Architect • Accenture • Wagmice AI Founder</p>
+            <p className="text-xs text-muted-foreground">AI &amp; Data Architect • Enterprise Technology • NexusAI</p>
           </div>
         </motion.div>
       </div>

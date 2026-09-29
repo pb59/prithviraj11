@@ -23,7 +23,7 @@ const products = [
     icon: Database,
     name: 'Talk2SQL',
     tagline: 'Natural language analytics',
-    description: 'Query databases with plain English. Reduced query turnaround by ~40%.',
+    description: 'Explore natural-language interaction with structured data and SQL workflows.',
     color: 'from-primary to-accent',
     link: 'https://huggingface.co/spaces/prithvi55/talk2data',
   },
