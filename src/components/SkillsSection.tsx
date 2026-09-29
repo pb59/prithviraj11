@@ -3,7 +3,7 @@ import { Brain, Cloud, Shield, Users } from 'lucide-react';
 const skillCategories = [
   {
     icon: Brain,
-    title: 'Generative AI',
+    title: 'AI & Data Architecture',
     color: 'primary',
     skills: [
       'LLM Fine-Tuning (Hugging Face)',
@@ -21,7 +21,7 @@ const skillCategories = [
     title: 'Cloud & Data',
     color: 'accent',
     skills: [
-      'Azure (Expert)',
+      'Microsoft Azure',
       'AWS',
       'Google Cloud Platform',
       'Data Lakes & Warehouses',

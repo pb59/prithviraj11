@@ -18,7 +18,7 @@ const steps = [
     icon: Rocket,
     step: '03',
     title: 'Transform Your Business',
-    description: 'Implement production-ready GenAI solutions, upskill your team, and drive measurable ROI.',
+    description: 'Shape an implementation path, strengthen team capability, and define meaningful ways to evaluate progress.',
   },
 ];
 
