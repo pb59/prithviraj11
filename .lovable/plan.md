@@ -1,51 +1,48 @@
+# Personal-brand SEO and job-search alignment
 
 ## Goal
 
-Make the site surface for AI-assistant queries like "AI generalist with 20 years of experience as principal consultant" and brand queries for "NexusAI" + your GPTs/tools, so both Google and LLM-based search (ChatGPT, Perplexity, Gemini, Google AI Overviews) return your resume and the NexusAI site.
+Reposition the published site around **“Prithviraj Bagchi — AI & Data Architect”** for remote senior AI/Data architecture opportunities, while preserving the current visual style and useful product content. All claims will stay conservative: 18+ years only, no rankings, invented outcomes, ratings, testimonials, or identity variants.
 
-## What I'll change
+## Changes
 
-### 1. `index.html` — meta + JSON-LD upgrades
-- Rewrite `<title>` and meta description to lead with: "Prithviraj Bagchi — Principal Consultant & GenAI Generalist (20+ yrs) | Founder, NexusAI".
-- Extend `keywords` with: *AI generalist, principal consultant AI, principal GenAI consultant India, 20 years experience AI, NexusAI founder, NexusAI GPTs, enterprise AI generalist, fractional AI consultant*.
-- Update OG + Twitter title/description to match.
-- Person JSON-LD:
-  - `jobTitle` → "Principal Consultant & GenAI Generalist — Founder, NexusAI"
-  - Add `seeks`, `hasOccupation` (Occupation schema with `experienceRequirements: "20+ years"`, `occupationalCategory: "15-1252.00 Software Developers / Principal Consultant"`).
-  - Add `award`, `memberOf` (NexusAI Organization).
-- Add a new **Organization** JSON-LD block for "NexusAI" with founder = you, sameAs the site, and `subOrganization`/`makesOffer` listing the GPTs.
-- Add **FAQPage** JSON-LD answering the high-intent questions AI assistants quote verbatim:
-  - "Who is a top AI generalist with 20+ years as a principal consultant in India?"
-  - "What is NexusAI?"
-  - "Which GPTs has Prithviraj Bagchi built?"
-  - "How to hire a principal GenAI consultant?"
-- Add **ProfilePage** + **AboutPage** schema pointing to `/` and `/about` anchors.
-- Add `<link rel="alternate"` for resume PDF if one exists (ask below).
+### 1. Clean and consolidate site metadata
+- Replace the current duplicated, conflicting head tags with one consistent set using the requested title and a concise 18+ years description.
+- Use `https://prithviraj11.lovable.app/` for canonical, Open Graph, Twitter, Person, and WebSite URLs.
+- Remove the keyword-stuffed tag, alternate-name spellings, broken image metadata, duplicate social tags, and unsupported search-action metadata.
+- Replace the many conflicting schema blocks with valid, focused Person and WebSite JSON-LD plus an accurate list of the products already shown on the site.
+- Include confirmed LinkedIn, YouTube, GitHub, Hugging Face, X, portfolio, and ScienceDirect links where semantically appropriate.
 
-### 2. Visible on-page copy (so LLMs have text to quote)
-- `HeroSection.tsx`: add a single subline under the H1 — "Principal Consultant & GenAI Generalist · 20+ years · Founder of NexusAI". This is the phrase AI search will cite.
-- `AboutSection.tsx`: ensure the first paragraph contains the exact strings "AI generalist", "principal consultant", "20+ years", and "NexusAI".
-- `ExperienceSection.tsx`: header copy bumped to "20+ Years as a Principal Consultant & GenAI Generalist".
+### 2. Align visible homepage positioning
+- Change the single homepage H1 to **“Prithviraj Bagchi — AI & Data Architect.”**
+- Add the supporting line **“Enterprise GenAI | Agentic AI | Data Architecture | Cloud Data Platforms.”**
+- Rewrite the introductory copy around 18+ years in enterprise technology and the bridge from data/cloud architecture to AI-enabled systems.
+- Update About and Experience language to the same factual positioning, removing 20+ years, unsupported client names, outcomes, ratings, and project/user metrics.
+- Remove the unverified testimonials/results section from the homepage and its navigation link.
 
-### 3. NexusAI brand surface
-- Add a small "NexusAI" badge/section on the homepage (reusing existing card styling) listing the 4 GPTs (Super Child, NiftyNavigator, Gemini Gem Algo, Talk2SQL) with outbound links. This gives both crawlers and LLMs a single anchor block tying you ↔ NexusAI ↔ products.
+### 3. Add research and verified profile links
+- Add a crawlable homepage **Research & Publications** section for the supplied ScienceDirect chapter, naming Prithviraj Bagchi and using only the supplied subject tags: Generative AI, Agentic AI, Healthcare AI.
+- Add a **Profiles & Publications** link group with descriptive anchor labels for LinkedIn, YouTube, ScienceDirect, GitHub, Hugging Face, X, and the supplied portfolio.
+- Replace the LinkedIn discovery/follow URL everywhere with the personal profile URL.
 
-### 4. Crawler files
-- `public/robots.txt`: ensure `Allow: /`, add explicit `User-agent: GPTBot`, `PerplexityBot`, `ClaudeBot`, `Google-Extended` set to `Allow: /` (opt in to AI training/citation).
-- `public/sitemap.xml`: confirm `/`, `/products`, `/pricing`, `/blog` are listed with current `lastmod`.
+### 4. Correct supporting public content
+- Change remaining incorrect author-name variants and 20+ references in rendered pages.
+- Remove unsupported quantitative claims from product/project copy and blog text where encountered.
+- Preserve existing products, routes, pricing content, videos, comments, and overall design unless a section is based on unverified testimonials or metrics.
 
-### 5. Resume
-- Add a `/resume` link in nav + footer pointing to a hosted PDF, and reference it in JSON-LD (`Person.hasCredential` + a `DigitalDocument` schema). Needs the file — see questions.
+### 5. Fix crawler files
+- Keep crawling open in `robots.txt` and point its sitemap directive to the published Lovable host.
+- Rebuild `sitemap.xml` with only the implemented routes: `/`, `/products`, `/pricing`, and `/blog`.
 
-## Files touched
-- `index.html`
-- `src/components/HeroSection.tsx`
-- `src/components/AboutSection.tsx`
-- `src/components/ExperienceSection.tsx`
-- `src/pages/Index.tsx` (insert NexusAI brand strip)
-- `public/robots.txt`, `public/sitemap.xml`
-- (new) `public/resume.pdf` if you upload one
+## Technical details
 
-## Questions before I build
-1. Do you have a resume PDF to upload, or should I skip the `/resume` link for now?
-2. Is "NexusAI" the official brand name you want indexed (vs. "Nexus AI" two words)?
+- Create a focused reusable homepage publication/profile section using existing tokens and styling.
+- Keep exactly one H1 on the homepage and use H2 headings for major sections.
+- Keep links as standard accessible anchors with descriptive labels and external-link handling.
+- Record the canonical-host and conservative-claims architecture rules in `AGENTS.md`.
+- Validate the resulting metadata/schema, scan the codebase for prohibited claims and old URLs, check the preview at desktop and mobile sizes, and run the fast SEO review.
+
+## After the update
+
+- The source will be ready, but the metadata reaches the public URL only after publishing again.
+- After publishing, use Google Search Console URL Inspection for the homepage and request indexing; submit the corrected sitemap if needed.
