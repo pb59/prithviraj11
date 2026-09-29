@@ -49,7 +49,7 @@ const profileLinks = [
 
 export const ResearchSection = () => {
   return (
-    <section id="research" className="section-padding bg-section-alt">
+    <section id="research" className="section-padding scroll-mt-20 md:scroll-mt-24 bg-section-alt">
       <div className="container-custom">
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
           <div>
