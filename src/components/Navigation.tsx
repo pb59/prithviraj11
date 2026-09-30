@@ -4,11 +4,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/#about', label: 'About' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/products', label: 'Projects' },
   { href: '/#research', label: 'Research' },
+  { href: '/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -48,48 +48,43 @@ export const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display font-bold text-xl text-gradient">NexusAI</span>
+          <Link to="/" className="flex items-center gap-2.5 group" aria-label="Prithviraj Bagchi — home">
+            <span className="w-8 h-8 rounded-md border border-primary/40 bg-primary/10 flex items-center justify-center font-display text-sm font-bold text-primary">
+              PB
+            </span>
+            <span className="font-display font-semibold text-base text-foreground">Prithviraj Bagchi</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
               const isRoute = !link.href.startsWith('/#');
-              const className = `relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+              const className = `relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
                 isActive(link.href)
                   ? 'text-primary'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'
+                  : 'text-muted-foreground hover:text-foreground'
               }`;
-              const indicator = isActive(link.href) && (
-                <motion.div
-                  layoutId="nav-indicator"
-                  className="absolute inset-0 rounded-lg bg-primary/10 border border-primary/20 -z-10"
-                  transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-                />
-              );
               return isRoute ? (
                 <Link key={link.href} to={link.href} onClick={() => handleNavClick(link.href)} className={className}>
-                  {link.label}{indicator}
+                  {link.label}
                 </Link>
               ) : (
                 <a key={link.href} href={link.href} onClick={() => handleNavClick(link.href)} className={className}>
-                  {link.label}{indicator}
+                  {link.label}
                 </a>
               );
             })}
           </div>
 
           {/* CTA Button */}
-          <Link
-            to="/pricing"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-primary/25"
+          <a
+            href="https://www.linkedin.com/in/prithviraj999/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-md border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            Get Started
-          </Link>
+            Connect
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -124,13 +119,15 @@ export const Navigation = () => {
                     </a>
                   );
                 })}
-                <Link
-                  to="/pricing"
-                  className="mx-4 mt-2 inline-flex items-center justify-center px-4 py-3 text-sm font-semibold rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground"
+                <a
+                  href="https://www.linkedin.com/in/prithviraj999/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-4 mt-2 inline-flex items-center justify-center px-4 py-3 text-sm font-semibold rounded-md bg-primary text-primary-foreground"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
-                </Link>
+                  Connect on LinkedIn
+                </a>
               </div>
             </motion.div>
           )}

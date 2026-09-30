@@ -1,153 +1,158 @@
 import { useState } from 'react';
-import { ArrowRight, Play, Sparkles, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen, Linkedin, Play, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import profilePhoto from '@/assets/profile-photo.jpg';
 import adVideo from '@/assets/ad-demo.mp4';
 
+const focusAreas = ['Enterprise GenAI', 'Agentic AI', 'Data Architecture', 'Cloud Data Platforms'];
+
 export const HeroSection = () => {
   const [showAdVideo, setShowAdVideo] = useState(false);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-hero">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
-        
-        {/* Grid Pattern */}
+    <section id="home" className="relative min-h-[92vh] flex items-center overflow-hidden pt-28 pb-16">
+      <div className="absolute inset-0 bg-hero" aria-hidden="true">
+        <div className="absolute -top-32 right-0 w-[560px] h-[560px] bg-primary/10 rounded-full blur-[140px]" />
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-                              linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundImage: `linear-gradient(hsl(var(--foreground) / 0.4) 1px, transparent 1px),
+                              linear-gradient(90deg, hsl(var(--foreground) / 0.4) 1px, transparent 1px)`,
+            backgroundSize: '72px 72px',
+            maskImage: 'radial-gradient(ellipse at 70% 30%, black, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at 70% 30%, black, transparent 70%)',
           }}
         />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow text-sm font-medium mb-8"
-          >
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-muted-foreground">Prithviraj Bagchi · Enterprise AI &amp; Data Architecture</span>
-          </motion.div>
+        <div className="grid lg:grid-cols-[1.4fr_0.6fr] gap-12 lg:gap-16 items-end">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-3 text-xs md:text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground mb-6"
+            >
+              <span className="h-px w-8 bg-primary" aria-hidden="true" />
+              18+ years in enterprise technology
+            </motion.p>
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6"
-          >
-            Prithviraj Bagchi
-            <br />
-            <span className="text-gradient">Principal Consultant &amp; GenAI Generalist</span>
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="font-display font-bold tracking-tight leading-[1.05] mb-6"
+            >
+              <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap text-foreground">Prithviraj Bagchi</span>
+              <span className="block mt-3 text-xl sm:text-2xl md:text-3xl font-medium text-primary">
+                Principal Consultant &amp; GenAI Generalist
+              </span>
+            </motion.h1>
 
-          {/* Tagline for AI/SEO search */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-base md:text-lg font-medium text-primary/90 mb-4"
-          >
-            AI &amp; Data Architect · Enterprise GenAI | Agentic AI | Data Architecture | Cloud Data Platforms
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.12 }}
+              className="text-sm md:text-base text-foreground/80 mb-5"
+            >
+              <span className="font-medium text-foreground">AI &amp; Data Architect</span>
+              <span className="text-muted-foreground"> · </span>
+              {focusAreas.map((area, i) => (
+                <span key={area}>
+                  {area}
+                  {i < focusAreas.length - 1 && <span className="text-muted-foreground"> | </span>}
+                </span>
+              ))}
+            </motion.p>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
-          >
-            18+ years in enterprise technology, bridging data engineering and cloud architecture with practical GenAI, RAG, and agentic AI systems.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.18 }}
+              className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed mb-10"
+            >
+              18+ years in enterprise technology, bridging data engineering and cloud architecture with practical GenAI, RAG, and agentic AI systems.
+            </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.24 }}
+              className="flex flex-wrap items-center gap-3"
+            >
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Explore My Work <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+              <a
+                href="#research"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card/60 text-foreground font-semibold hover:border-primary/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <BookOpen size={18} aria-hidden="true" /> Research &amp; Publications
+              </a>
+              <a
+                href="https://www.linkedin.com/in/prithviraj999/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-lg text-muted-foreground font-medium hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <Linkedin size={18} aria-hidden="true" /> Connect on LinkedIn <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Profile card */}
+          <motion.aside
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-16"
+            className="rounded-xl border border-border bg-card/70 p-6 backdrop-blur-sm"
+            aria-label="Profile summary"
           >
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold text-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-primary/25"
-            >
-              Explore Products
-              <ArrowRight size={20} />
-            </Link>
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src={profilePhoto}
+                alt="Portrait of Prithviraj Bagchi"
+                width={56}
+                height={56}
+                className="w-14 h-14 rounded-full object-cover border border-border"
+              />
+              <div>
+                <p className="font-display font-semibold">Prithviraj Bagchi</p>
+                <p className="text-xs text-muted-foreground">AI &amp; Data Architect · NexusAI</p>
+              </div>
+            </div>
+            <dl className="grid grid-cols-2 gap-px bg-border rounded-lg overflow-hidden text-sm">
+              {[
+                ['Experience', '18+ years'],
+                ['Focus', 'GenAI & Agents'],
+                ['Foundation', 'Data Architecture'],
+                ['Platforms', 'Cloud Data'],
+              ].map(([k, v]) => (
+                <div key={k} className="bg-card p-3">
+                  <dt className="text-xs text-muted-foreground">{k}</dt>
+                  <dd className="font-medium mt-0.5">{v}</dd>
+                </div>
+              ))}
+            </dl>
             <button
               onClick={() => setShowAdVideo(true)}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-border bg-secondary/30 text-foreground font-semibold text-lg hover:bg-secondary/60 transition-all hover:scale-105"
+              className="mt-5 w-full inline-flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-2"
             >
-              <Play size={18} />
-              Watch Demo
+              <Play size={15} aria-hidden="true" /> Watch the NexusAI demo
             </button>
-          </motion.div>
-
-          {/* Expertise Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-          >
-            {[
-              { value: '18+', label: 'Years in Enterprise Technology' },
-              { value: 'AI', label: 'Enterprise & GenAI Architecture' },
-              { value: 'Data', label: 'Engineering & Analytics' },
-              { value: 'Cloud', label: 'Data Platforms' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+          </motion.aside>
         </div>
-
-        {/* Profile + Credentials */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-16 flex items-center justify-center gap-4"
-        >
-          <img src={profilePhoto} alt="Prithviraj Bagchi" className="w-12 h-12 rounded-full border-2 border-primary/50" />
-          <div className="text-left">
-            <p className="font-semibold text-sm">Built by Prithviraj Bagchi</p>
-            <p className="text-xs text-muted-foreground">AI &amp; Data Architect • Enterprise Technology • NexusAI</p>
-          </div>
-        </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="flex flex-col items-center gap-2 text-muted-foreground"
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-muted-foreground to-transparent" />
-        </motion.div>
-      </div>
-      {/* Ad Video Modal */}
       {showAdVideo && (
         <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowAdVideo(false)}>
           <div className="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden bg-card border border-border shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setShowAdVideo(false)} className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 text-foreground hover:bg-background">
+            <button onClick={() => setShowAdVideo(false)} aria-label="Close video" className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 text-foreground hover:bg-background">
               <X size={20} />
             </button>
             <video src={adVideo} controls autoPlay className="w-full" />
